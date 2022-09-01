@@ -2,4 +2,4 @@
 
 
 Links:
-* [Lab00](/slides/lab00.html)
+* [Lab00](/cs11-slides/slides/lab00.html)
