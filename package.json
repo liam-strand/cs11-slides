@@ -1,25 +1,19 @@
 {
-  "name": "reveal.js",
-  "version": "4.3.1",
-  "description": "The HTML Presentation Framework",
-  "homepage": "https://revealjs.com",
-  "subdomain": "revealjs",
+  "name": "cs11-slides",
   "main": "dist/reveal.js",
   "module": "dist/reveal.esm.js",
-  "license": "MIT",
   "scripts": {
     "test": "gulp test",
     "start": "gulp serve",
     "build": "gulp build"
   },
   "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "https://hakim.se"
+    "name": "Liam Strand",
+    "email": "Liam.Strand@tufts.edu"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+    "url": "git://github.com/liam-strand/cs11-slides.git"
   },
   "engines": {
     "node": ">=10.0.0"
