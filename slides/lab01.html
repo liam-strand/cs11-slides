@@ -76,7 +76,7 @@
                     </section>
                     <section>
                         <h2> Compilation </h2>
-                        <p class="fragment"> <code class="r-fit-text"> g++ -Wall -Wextra -Werror -o hello hello.cpp </code> </p>
+                        <p class="fragment"> <code class="r-fit-text"> g++ -Wall -Wextra -o hello hello.cpp </code> </p>
                         <p class="fragment"> <code> ./hello </code> </p>
                     </section>
                     <section>
@@ -87,30 +87,30 @@
                                 <th> C++ Type </th>
                                 <th> Example </th>
                             </tr>
-                            <tr class="fragment">
+                            <tr>
                                 <td> boolean </td>
-                                <td> <code>bool</code> </td>
-                                <td> <code>true</code> </td>
+                                <td> <code class="fragment" data-fragment-index="2">bool</code> </td>
+                                <td> <code class="fragment" data-fragment-index="2">true</code> </td>
                             </tr>
-                            <tr class="fragment">
-                                <td> character </td>
-                                <td> <code>char</code> </td>
-                                <td> <code>'C'</code> </td>
+                            <tr>
+                                <td> one character </td>
+                                <td> <code class="fragment" data-fragment-index="3">char</code> </td>
+                                <td> <code class="fragment" data-fragment-index="3">'F'</code> </td>
                             </tr>
-                            <tr class="fragment">
+                            <tr>
                                 <td> integer </td>
-                                <td> <code>int</code> </td>
-                                <td> <code>42</code> </td>
+                                <td> <code class="fragment" data-fragment-index="4">int</code> </td>
+                                <td> <code class="fragment" data-fragment-index="4">42</code> </td>
                             </tr>
-                            <tr class="fragment">
+                            <tr>
                                 <td> decimal </td>
-                                <td> <code>float</code> </td>
-                                <td> <code>3.59</code> </td>
+                                <td> <code class="fragment" data-fragment-index="5">float</code> </td>
+                                <td> <code class="fragment" data-fragment-index="5">3.59</code> </td>
                             </tr>
-                            <tr class="fragment">
+                            <tr>
                                 <td> many characters </td>
-                                <td> <code>string</code> </td>
-                                <td> <code>"Hello, World."</code> </td>
+                                <td> <code class="fragment" data-fragment-index="6">string</code> </td>
+                                <td> <code class="fragment" data-fragment-index="6">"Hello, World."</code> </td>
                             </tr>
                         </table>
                         <aside class="notes">
@@ -128,35 +128,35 @@
                             <tr> <td> Multiply two decimals </td> <td></td> </tr>
                             <tr> <td> Divide two integers </td>   <td></td> </tr>
                             <tr> <td> Modulo two integers </td>   <td></td> </tr>
-                            <tr> <td> \((x + 35 / h + 7) - k\)</td></tr>
+                            <tr> <td> \(\frac{x + 35}{h \times 7} - k\)</td></tr>
                         </table>
                     </section>
                     <section>
                         <h2> Terminal I/O</h2>
-                        <table class="fragment">
+                        <table>
                             <tr>
                                 <th> C++ thing </th>
                                 <th> What it is/does </th>
                             </tr>
                             <tr>
                                 <td> <code>cout</code> </td>
-                                <td> Where data is sent for display </td>
+                                <td><p class="fragment" data-fragment-index="1"> Where data is sent for display </p></td>
                             </tr>
                             <tr>
                                 <td> <code><<</code> </td>
-                                <td> Output the thing on my right </td>
+                                <td><p class="fragment" data-fragment-index="2"> Output the thing on my right </p></td>
                             </tr>
                             <tr>
                                 <td> <code>cin</code> </td>
-                                <td> Where the terminal sends input data </td>
+                                <td><p class="fragment" data-fragment-index="3"> Where the terminal sends input data </p></td>
                             </tr>
                             <tr>
                                 <td> <code>>></code> </td>
-                                <td> Extract from the thing on my left </td>
+                                <td><p class="fragment" data-fragment-index="4"> Extract from the thing on my left </p></td>
                             </tr>
                             <tr>
                                 <td> <code>iostream</code></td>
-                                <td> The library that must be <code>#include</code>d </td>
+                                <td><p class="fragment" data-fragment-index="5"> The library that must be <code>#include</code>d </p></td>
                             </tr>
                         </table>
                     </section>
@@ -166,7 +166,7 @@
                     </section>
                     <section>
                         <h2> Conditionals </h2>
-                        <pre><code class="cpp" data-trim data-noescape data-line-numbers="1-2|4,10,12|5,7,9|6|13">
+                        <pre><code class="cpp" data-trim data-noescape data-line-numbers="|1,2|4,10,12|5,7,9|6|13">
                             int x = 7;
                             int y = 35;
 
@@ -184,7 +184,7 @@
                     </section>
                     <section>
                         <h2> More Conditionals </h2>
-                        <pre><code class="cpp" data-trim data-noescape data-line-numbers="1,2|4|6,8,10,12|9">
+                        <pre><code class="cpp" data-trim data-noescape data-line-numbers="|1,2|4|6,8,10,12|9">
                             int x = 42;
                             int y = 134;
 
