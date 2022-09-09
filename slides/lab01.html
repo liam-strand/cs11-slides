@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title> cs11-lab01 </title>
+
+        <link rel="stylesheet" href="../dist/reveal.css">
+        <link rel="stylesheet" href="../dist/theme/black.css" id="theme">
+        <link rel="stylesheet" href="../plugin/highlight/monokai.css">
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <div class="slides">
+
+                <section>
+                    <section>
+                        <h1> Welcome! </h1>
+                        <code> lab01 </code>
+                    </section>
+                    <section>
+                        <h2> Are you supposed to be here? </h2>
+                        yes, obviously
+                    </section>
+                    <section>
+                        This is LD. LC is in the other room.
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1> Today's goals </h1>
+                    </section>
+                    <section>
+                        <h2> Part 1: Check In </h2>
+                        <ul>
+                            <li> hw00 and lab00 </li>
+                            <li> Terminal and Linux </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2> Part 2: Review </h2>
+                        <ul>
+                            <li> Compilation </li>
+                            <li> Variables </li>
+                            <li> Operations </li>
+                            <li> Terminal I/O </li>
+                            <li> Arrays </li>
+                            <li> Conditionals </li>
+                            <li> Scope </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2> Part 3: Diff Testing </h2>
+                        <ul>
+                            <li> Terminal pipes </li>
+                            <li> Viewing files </li>
+                            <li> <code>diff</code> </li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <h2> Check In </h2>
+                    <ul>
+                        <li> Can you work on your assignments? </li>
+                        <li> How did hw00 go? </li>
+                        <li> How is using the terminal? </li>
+                    </ul>
+                </section>
+                <section>
+                    <section>
+                        <h1> Review </h1>
+                    </section>
+                    <section>
+                        <h2> Compilation </h2>
+                        <p class="fragment"> <code class="r-fit-text"> g++ -Wall -Wextra -Werror -o hello hello.cpp </code> </p>
+                        <p class="fragment"> <code> ./hello </code> </p>
+                    </section>
+                    <section>
+                        <h2> Variables </h2>
+                        <table>
+                            <tr>
+                                <th> Abstract Type </th>
+                                <th> C++ Type </th>
+                                <th> Example </th>
+                            </tr>
+                            <tr class="fragment">
+                                <td> boolean </td>
+                                <td> <code>bool</code> </td>
+                                <td> <code>true</code> </td>
+                            </tr>
+                            <tr class="fragment">
+                                <td> character </td>
+                                <td> <code>char</code> </td>
+                                <td> <code>'C'</code> </td>
+                            </tr>
+                            <tr class="fragment">
+                                <td> integer </td>
+                                <td> <code>int</code> </td>
+                                <td> <code>42</code> </td>
+                            </tr>
+                            <tr class="fragment">
+                                <td> decimal </td>
+                                <td> <code>float</code> </td>
+                                <td> <code>3.59</code> </td>
+                            </tr>
+                            <tr class="fragment">
+                                <td> many characters </td>
+                                <td> <code>string</code> </td>
+                                <td> <code>"Hello, World."</code> </td>
+                            </tr>
+                        </table>
+                        <aside class="notes">
+                            hi testing
+                        </aside>
+                    </section>
+                    <section>
+                        <h2> Operations </h2>
+                        <table>
+                            <tr>
+                                <th> Task </th>
+                                <th> C++ Expression </th>
+                            </tr>
+                            <tr> <td> Add two integers </td>      <td></td> </tr>
+                            <tr> <td> Multiply two decimals </td> <td></td> </tr>
+                            <tr> <td> Divide two integers </td>   <td></td> </tr>
+                            <tr> <td> Modulo two integers </td>   <td></td> </tr>
+                            <tr> <td> \((x + 35 / h + 7) - k\)</td></tr>
+                        </table>
+                    </section>
+                    <section>
+                        <h2> Terminal I/O</h2>
+                        <table class="fragment">
+                            <tr>
+                                <th> C++ thing </th>
+                                <th> What it is/does </th>
+                            </tr>
+                            <tr>
+                                <td> <code>cout</code> </td>
+                                <td> Where data is sent for display </td>
+                            </tr>
+                            <tr>
+                                <td> <code><<</code> </td>
+                                <td> Output the thing on my right </td>
+                            </tr>
+                            <tr>
+                                <td> <code>cin</code> </td>
+                                <td> Where the terminal sends input data </td>
+                            </tr>
+                            <tr>
+                                <td> <code>>></code> </td>
+                                <td> Extract from the thing on my left </td>
+                            </tr>
+                            <tr>
+                                <td> <code>iostream</code></td>
+                                <td> The library that must be <code>#include</code>d </td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <h2> Arrays </h2>
+                        Contiguous, uniform memory
+                    </section>
+                    <section>
+                        <h2> Conditionals </h2>
+                        <pre><code class="cpp" data-trim data-noescape data-line-numbers="1-2|4,10,12|5,7,9|6|13">
+                            int x = 7;
+                            int y = 35;
+
+                            if (x < 10) {
+                                if (y > 30) {
+                                    cout << "go ";
+                                } else {
+                                    cout << "yay ";
+                                }
+                            } else {
+                                cout << "boo ";
+                            }
+                            cout << "CS 11 students!" << endl;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2> More Conditionals </h2>
+                        <pre><code class="cpp" data-trim data-noescape data-line-numbers="1,2|4|6,8,10,12|9">
+                            int x = 42;
+                            int y = 134;
+
+                            cout << "I love ";
+
+                            if (x <= 40) {
+                                cout << "variables" << endl;
+                            } else if (y > 100) {
+                                cout << "operations" << endl;
+                            } else {
+                                cout << "conditionals" << endl;
+                            }
+                            
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2> Scope </h2>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1 class="r-fit-text"> <code>diff</code> </h1>
+                    </section>
+                    <section>
+                        
+                    </section>
+                </section>
+                <section>
+                    <h2> Feedback Form </h2>
+                    <img class="r-stretch" src="../assets/feedback-code.png">
+                </section>
+            </div>
+        </div>
+
+        <script src="../dist/reveal.js"></script>
+        <script src="../plugin/markdown/markdown.js"></script>
+        <script src="../plugin/highlight/highlight.js"></script>
+        <script src="../plugin/notes/notes.js"></script>
+        <script src="../plugin/math/math.js"></script>
+
+        <script>
+
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+            });
+
+        </script>
+
+    </body>
+</html>
