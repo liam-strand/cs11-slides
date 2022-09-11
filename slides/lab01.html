@@ -76,7 +76,12 @@
                     </section>
                     <section>
                         <h2> Compilation </h2>
-                        <p class="fragment"> <code class="r-fit-text"> g++ -Wall -Wextra -o hello hello.cpp </code> </p>
+                        <p class="fragment"> <code class="r-fit-text"> 
+                            <span class="fragment highlight-current-blue">g++</span> 
+                            <span class="fragment highlight-current-blue">-Wall -Wextra</span>
+                            <span class="fragment highlight-current-blue">-o hello</span>
+                            <span class="fragment highlight-current-blue">hello.cpp</span>
+                        </code> </p>
                         <p class="fragment"> <code> ./hello </code> </p>
                     </section>
                     <section>
@@ -140,29 +145,29 @@
                             </tr>
                             <tr>
                                 <td> <code>cout</code> </td>
-                                <td><p class="fragment" data-fragment-index="1"> Where data is sent for display </p></td>
+                                <td><p class="fragment"> Where data is sent for display </p></td>
                             </tr>
                             <tr>
                                 <td> <code><<</code> </td>
-                                <td><p class="fragment" data-fragment-index="2"> Output the thing on my right </p></td>
+                                <td><p class="fragment"> Output the thing on my right </p></td>
                             </tr>
                             <tr>
                                 <td> <code>cin</code> </td>
-                                <td><p class="fragment" data-fragment-index="3"> Where the terminal sends input data </p></td>
+                                <td><p class="fragment"> Where the terminal sends input data </p></td>
                             </tr>
                             <tr>
                                 <td> <code>>></code> </td>
-                                <td><p class="fragment" data-fragment-index="4"> Extract from the thing on my left </p></td>
+                                <td><p class="fragment"> Extract from the thing on my left </p></td>
                             </tr>
                             <tr>
                                 <td> <code>iostream</code></td>
-                                <td><p class="fragment" data-fragment-index="5"> The library that must be <code>#include</code>d </p></td>
+                                <td><p class="fragment"> The library that must be <code>#include</code>d </p></td>
                             </tr>
                         </table>
                     </section>
                     <section>
                         <h2> Arrays </h2>
-                        Contiguous, uniform memory
+                        Board Work
                     </section>
                     <section>
                         <h2> Conditionals </h2>
@@ -197,11 +202,76 @@
                             } else {
                                 cout << "conditionals" << endl;
                             }
-                            
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2> Boolean Expressions </h2>
+                        <table>
+                            <tr>
+                                <th> Expression </th>
+                                <th> Value </th>
+                            </tr>
+                            <tr>
+                                <td><code>5 <= 7</code></td>
+                                <td><code class="fragment">true</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>350500 == -500</code></td>
+                                <td><code class="fragment">false</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>(5 <= 7) && (350500 == -500)</code></td>
+                                <td><code class="fragment">false</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>(5 <= 7) || (350500 == -500)</code></td>
+                                <td><code class="fragment">true</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>(5 >= 7) == true</code></td>
+                                <td><code class="fragment">false</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>(5 <= 7) != false</code></td>
+                                <td><code class="fragment">true</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>(5 <= 7) != (30 < 10)</code></td>
+                                <td><code class="fragment">true</code></td>
+                            </tr>
+                            <tr>
+                                <td><code class="fragment">5 = 3</code></td>
+                                <td><code class="fragment">true</code></td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section data-auto-animate>
+                        <h2> Liam's Pet Peeve </h2>
+                        <pre><code class="cpp" data-trim data-noescape data-id="pet-peeve-code">
+                            if (x == true) {
+                                /* do something */
+                            }
+
+                            if (y != true) {
+                                /* do something */
+                            }
+                        </code></pre>
+                    </section>
+                    <section data-auto-animate>
+                        <h2> Liam's Pet Peeve </h2>
+                        <pre><code class="cpp" data-trim data-noescape data-id="pet-peeve-code">
+                            if (x) {
+                                /* do something */
+                            }
+
+                            if (not y) {
+                                /* do something */
+                            }
                         </code></pre>
                     </section>
                     <section>
                         <h2> Scope </h2>
+                        Live Coding
                     </section>
                 </section>
                 <section>
