@@ -1,177 +1,205 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
-        <title> cs11-lab01 </title>
+    <title> cs11-lab01 </title>
 
-        <link rel="stylesheet" href="../dist/reveal.css">
-        <link rel="stylesheet" href="../dist/theme/black.css" id="theme">
-        <link rel="stylesheet" href="../plugin/highlight/monokai.css">
-    </head>
+    <link rel="stylesheet" href="../dist/reveal.css">
+    <link rel="stylesheet" href="../dist/theme/black.css" id="theme">
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css">
+</head>
 
-    <body>
+<body>
 
-        <div class="reveal">
+    <div class="reveal">
 
-            <div class="slides">
+        <div class="slides">
 
+            <section>
                 <section>
-                    <section>
-                        <h1> Welcome! </h1>
-                        <code> lab01 </code>
-                    </section>
-                    <section>
-                        <h2> Are you supposed to be here? </h2>
-                        yes, obviously
-                    </section>
-                    <section>
-                        This is LD. LC is in the other room.
-                    </section>
+                    <h1> Welcome! </h1>
+                    <code> lab01 </code>
                 </section>
                 <section>
-                    <section>
-                        <h1> Today's goals </h1>
-                    </section>
-                    <section>
-                        <h2> Part 1: Check In </h2>
-                        <ul>
-                            <li> hw00 and lab00 </li>
-                            <li> Terminal and Linux </li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2> Part 2: Review </h2>
-                        <ul>
-                            <li> Compilation </li>
-                            <li> Variables </li>
-                            <li> Operations </li>
-                            <li> Terminal I/O </li>
-                            <li> Arrays </li>
-                            <li> Conditionals </li>
-                            <li> Scope </li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2> Part 3: Diff Testing </h2>
-                        <ul>
-                            <li> Terminal pipes </li>
-                            <li> Viewing files </li>
-                            <li> <code>diff</code> </li>
-                        </ul>
-                    </section>
+                    <h2> Are you supposed to be here? </h2>
+                    yes, obviously
                 </section>
                 <section>
-                    <h2> Check In </h2>
+                    This is LD. LC is in the other room.
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1> Today's goals </h1>
+                </section>
+                <section>
+                    <h2> Part 1: Check In </h2>
                     <ul>
-                        <li> Can you work on your assignments? </li>
-                        <li> How did hw00 go? </li>
-                        <li> How is using the terminal? </li>
+                        <li> hw00 and lab00 </li>
+                        <li> Terminal and Linux </li>
                     </ul>
                 </section>
                 <section>
-                    <section>
-                        <h1> Review </h1>
-                    </section>
-                    <section>
-                        <h2> Compilation </h2>
-                        <p class="fragment"> <code class="r-fit-text"> 
+                    <h2> Part 2: Review </h2>
+                    <ul>
+                        <li> Compilation </li>
+                        <li> Variables </li>
+                        <li> Operations </li>
+                        <li> Terminal I/O </li>
+                        <li> Arrays </li>
+                        <li> Conditionals </li>
+                        <li> Scope </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2> Part 3: <code>diff</code> Testing </h2>
+                    <ul>
+                        <li>Practice performing input/output redirections</li>
+                        <li>Learn how to use <code>diff</code></li>
+                        <li>Practice generating ground truth files</li>
+                        <li>Learn about decider programs</li>
+                        <li>Practice using strings, I/O, and conditionals</li>
+                        <li>compile-<code>diff</code>-submit</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h2> Check In </h2>
+                <ul>
+                    <li> Can you work on your assignments? </li>
+                    <li> How did hw00 go? </li>
+                    <li> How is using the terminal? </li>
+                </ul>
+            </section>
+            <section>
+                <section>
+                    <h1> Review </h1>
+                </section>
+                <section>
+                    <h2> Compilation </h2>
+                    <p class="fragment"> <code class="r-fit-text">
                             <span class="fragment highlight-current-blue">g++</span> 
                             <span class="fragment highlight-current-blue">-Wall -Wextra</span>
                             <span class="fragment highlight-current-blue">-o hello</span>
                             <span class="fragment highlight-current-blue">hello.cpp</span>
                         </code> </p>
-                        <p class="fragment"> <code> ./hello </code> </p>
-                    </section>
-                    <section>
-                        <h2> Variables </h2>
-                        <table>
-                            <tr>
-                                <th> Abstract Type </th>
-                                <th> C++ Type </th>
-                                <th> Example </th>
-                            </tr>
-                            <tr>
-                                <td> boolean </td>
-                                <td> <code class="fragment" data-fragment-index="2">bool</code> </td>
-                                <td> <code class="fragment" data-fragment-index="2">true</code> </td>
-                            </tr>
-                            <tr>
-                                <td> one character </td>
-                                <td> <code class="fragment" data-fragment-index="3">char</code> </td>
-                                <td> <code class="fragment" data-fragment-index="3">'F'</code> </td>
-                            </tr>
-                            <tr>
-                                <td> integer </td>
-                                <td> <code class="fragment" data-fragment-index="4">int</code> </td>
-                                <td> <code class="fragment" data-fragment-index="4">42</code> </td>
-                            </tr>
-                            <tr>
-                                <td> decimal </td>
-                                <td> <code class="fragment" data-fragment-index="5">float</code> </td>
-                                <td> <code class="fragment" data-fragment-index="5">3.59</code> </td>
-                            </tr>
-                            <tr>
-                                <td> many characters </td>
-                                <td> <code class="fragment" data-fragment-index="6">string</code> </td>
-                                <td> <code class="fragment" data-fragment-index="6">"Hello, World."</code> </td>
-                            </tr>
-                        </table>
-                        <aside class="notes">
-                            hi testing
-                        </aside>
-                    </section>
-                    <section>
-                        <h2> Operations </h2>
-                        <table>
-                            <tr>
-                                <th> Task </th>
-                                <th> C++ Expression </th>
-                            </tr>
-                            <tr> <td> Add two integers </td>      <td></td> </tr>
-                            <tr> <td> Multiply two decimals </td> <td></td> </tr>
-                            <tr> <td> Divide two integers </td>   <td></td> </tr>
-                            <tr> <td> Modulo two integers </td>   <td></td> </tr>
-                            <tr> <td> \(\frac{x + 35}{h \times 7} - k\)</td></tr>
-                        </table>
-                    </section>
-                    <section>
-                        <h2> Terminal I/O</h2>
-                        <table>
-                            <tr>
-                                <th> C++ thing </th>
-                                <th> What it is/does </th>
-                            </tr>
-                            <tr>
-                                <td> <code>cout</code> </td>
-                                <td><p class="fragment"> Where data is sent for display </p></td>
-                            </tr>
-                            <tr>
-                                <td> <code><<</code> </td>
-                                <td><p class="fragment"> Output the thing on my right </p></td>
-                            </tr>
-                            <tr>
-                                <td> <code>cin</code> </td>
-                                <td><p class="fragment"> Where the terminal sends input data </p></td>
-                            </tr>
-                            <tr>
-                                <td> <code>>></code> </td>
-                                <td><p class="fragment"> Extract from the thing on my left </p></td>
-                            </tr>
-                            <tr>
-                                <td> <code>iostream</code></td>
-                                <td><p class="fragment"> The library that must be <code>#include</code>d </p></td>
-                            </tr>
-                        </table>
-                    </section>
-                    <section>
-                        <h2> Arrays </h2>
-                        Board Work
-                    </section>
-                    <section>
-                        <h2> Conditionals </h2>
-                        <pre><code class="cpp" data-trim data-noescape data-line-numbers="|1,2|4,10,12|5,7,9|6|13">
+                    <p class="fragment"> <code> ./hello </code> </p>
+                </section>
+                <section>
+                    <h2> Variables </h2>
+                    <table>
+                        <tr>
+                            <th> Abstract Type </th>
+                            <th> C++ Type </th>
+                            <th> Example </th>
+                        </tr>
+                        <tr>
+                            <td> boolean </td>
+                            <td> <code class="fragment" data-fragment-index="2">bool</code> </td>
+                            <td> <code class="fragment" data-fragment-index="2">true</code> </td>
+                        </tr>
+                        <tr>
+                            <td> one character </td>
+                            <td> <code class="fragment" data-fragment-index="3">char</code> </td>
+                            <td> <code class="fragment" data-fragment-index="3">'F'</code> </td>
+                        </tr>
+                        <tr>
+                            <td> integer </td>
+                            <td> <code class="fragment" data-fragment-index="4">int</code> </td>
+                            <td> <code class="fragment" data-fragment-index="4">42</code> </td>
+                        </tr>
+                        <tr>
+                            <td> decimal </td>
+                            <td> <code class="fragment" data-fragment-index="5">float</code> </td>
+                            <td> <code class="fragment" data-fragment-index="5">3.59</code> </td>
+                        </tr>
+                        <tr>
+                            <td> many characters </td>
+                            <td> <code class="fragment" data-fragment-index="6">string</code> </td>
+                            <td> <code class="fragment" data-fragment-index="6">"Hello, World."</code> </td>
+                        </tr>
+                    </table>
+                    <aside class="notes">
+                        hi testing
+                    </aside>
+                </section>
+                <section>
+                    <h2> Operations </h2>
+                    <table>
+                        <tr>
+                            <th> Task </th>
+                            <th> C++ Expression </th>
+                        </tr>
+                        <tr>
+                            <td> Add two integers </td>
+                            <td><code class="fragment"> 5 + 7 </code></td>
+                        </tr>
+                        <tr>
+                            <td> Multiply two decimals </td>
+                            <td><code class="fragment"> 300 * 89 </code></td>
+                        </tr>
+                        <tr>
+                            <td> Divide two integers </td>
+                            <td><code class="fragment"> 30 / 7 </code></td>
+                        </tr>
+                        <tr>
+                            <td> Modulo two integers </td>
+                            <td><code class="fragment"> 36 % 5 </code></td>
+                        </tr>
+                        <tr>
+                            <td> \(\frac{x + 3}{h \times 7} - k\)</td>
+                            <td><code class="fragment">(x + 3)/(h * 7) - k</code></td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h2> Terminal I/O</h2>
+                    <table>
+                        <tr>
+                            <th> C++ thing </th>
+                            <th> What it is/does </th>
+                        </tr>
+                        <tr>
+                            <td> <code>cout</code> </td>
+                            <td>
+                                <p class="fragment"> Where data is sent for display </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <code><<</code> </td>
+                            <td>
+                                <p class="fragment"> Output the thing on my right </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <code>cin</code> </td>
+                            <td>
+                                <p class="fragment"> Where the terminal sends input data </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <code>>></code> </td>
+                            <td>
+                                <p class="fragment"> Extract from the thing on my left </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <code>iostream</code></td>
+                            <td>
+                                <p class="fragment"> The library that must be <code>#include</code>d </p>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h2> Arrays </h2>
+                    Board Work
+                </section>
+                <section>
+                    <h2> Conditionals </h2>
+                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="|1,2|4,10,12|5,7,9|6|13">
                             int x = 7;
                             int y = 35;
 
@@ -186,10 +214,10 @@
                             }
                             cout << "CS 11 students!" << endl;
                         </code></pre>
-                    </section>
-                    <section>
-                        <h2> More Conditionals </h2>
-                        <pre><code class="cpp" data-trim data-noescape data-line-numbers="|1,2|4|6,8,10,12|9">
+                </section>
+                <section>
+                    <h2> More Conditionals </h2>
+                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="|1,2|4|6,8,10,12|9">
                             int x = 42;
                             int y = 134;
 
@@ -203,51 +231,51 @@
                                 cout << "conditionals" << endl;
                             }
                         </code></pre>
-                    </section>
-                    <section>
-                        <h2> Boolean Expressions </h2>
-                        <table>
-                            <tr>
-                                <th> Expression </th>
-                                <th> Value </th>
-                            </tr>
-                            <tr>
-                                <td><code>5 <= 7</code></td>
-                                <td><code class="fragment">true</code></td>
-                            </tr>
-                            <tr>
-                                <td><code>350500 == -500</code></td>
-                                <td><code class="fragment">false</code></td>
-                            </tr>
-                            <tr>
-                                <td><code>(5 <= 7) && (350500 == -500)</code></td>
-                                <td><code class="fragment">false</code></td>
-                            </tr>
-                            <tr>
-                                <td><code>(5 <= 7) || (350500 == -500)</code></td>
-                                <td><code class="fragment">true</code></td>
-                            </tr>
-                            <tr>
-                                <td><code>(5 >= 7) == true</code></td>
-                                <td><code class="fragment">false</code></td>
-                            </tr>
-                            <tr>
-                                <td><code>(5 <= 7) != false</code></td>
-                                <td><code class="fragment">true</code></td>
-                            </tr>
-                            <tr>
-                                <td><code>(5 <= 7) != (30 < 10)</code></td>
-                                <td><code class="fragment">true</code></td>
-                            </tr>
-                            <tr>
-                                <td><code class="fragment">5 = 3</code></td>
-                                <td><code class="fragment">true</code></td>
-                            </tr>
-                        </table>
-                    </section>
-                    <section data-auto-animate>
-                        <h2> Liam's Pet Peeve </h2>
-                        <pre><code class="cpp" data-trim data-noescape data-id="pet-peeve-code">
+                </section>
+                <section>
+                    <h2> Boolean Expressions </h2>
+                    <table>
+                        <tr>
+                            <th> Expression </th>
+                            <th> Value </th>
+                        </tr>
+                        <tr>
+                            <td><code>5 <= 7</code></td>
+                            <td><code class="fragment">true</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>350500 == -500</code></td>
+                            <td><code class="fragment">false</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>(5 <= 7) && (350500 == -500)</code></td>
+                            <td><code class="fragment">false</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>(5 <= 7) || (350500 == -500)</code></td>
+                            <td><code class="fragment">true</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>(5 >= 7) == true</code></td>
+                            <td><code class="fragment">false</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>(5 <= 7) != false</code></td>
+                            <td><code class="fragment">true</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>(5 <= 7) != (30 < 10)</code></td>
+                            <td><code class="fragment">true</code></td>
+                        </tr>
+                        <tr>
+                            <td><code class="fragment">5 = 3</code></td>
+                            <td><code class="fragment">true</code></td>
+                        </tr>
+                    </table>
+                </section>
+                <section data-auto-animate>
+                    <h2> Liam's Pet Peeve </h2>
+                    <pre><code class="cpp" data-trim data-noescape data-id="pet-peeve-code">
                             if (x == true) {
                                 /* do something */
                             }
@@ -256,10 +284,10 @@
                                 /* do something */
                             }
                         </code></pre>
-                    </section>
-                    <section data-auto-animate>
-                        <h2> Liam's Pet Peeve </h2>
-                        <pre><code class="cpp" data-trim data-noescape data-id="pet-peeve-code">
+                </section>
+                <section data-auto-animate>
+                    <h2> Liam's Pet Peeve </h2>
+                    <pre><code class="cpp" data-trim data-noescape data-id="pet-peeve-code">
                             if (x) {
                                 /* do something */
                             }
@@ -268,45 +296,47 @@
                                 /* do something */
                             }
                         </code></pre>
-                    </section>
-                    <section>
-                        <h2> Scope </h2>
-                        Live Coding
-                    </section>
                 </section>
                 <section>
-                    <section>
-                        <h1 class="r-fit-text"> <code>diff</code> </h1>
-                    </section>
-                    <section>
-                        
-                    </section>
+                    <h2> Scope </h2>
+                    <a href="../assets/lab01_scope.cpp">Live Coding</a>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1 class="r-fit-text"> <code>diff</code> </h1>
                 </section>
                 <section>
-                    <h2> Feedback Form </h2>
-                    <img class="r-stretch" src="../assets/feedback-code.png">
+                    <h2>Find the <a href="https://www.cs.tufts.edu/cs/11/schedule/hw01/hw01.pdf"> lab spec</a></h2>
+                    It's time for a demo!
                 </section>
-            </div>
+            </section>
+            <section>
+                <h2> Feedback Form </h2>
+                <img class="r-stretch" src="../assets/feedback-code.png">
+            </section>
         </div>
+    </div>
 
-        <script src="../dist/reveal.js"></script>
-        <script src="../plugin/markdown/markdown.js"></script>
-        <script src="../plugin/highlight/highlight.js"></script>
-        <script src="../plugin/notes/notes.js"></script>
-        <script src="../plugin/math/math.js"></script>
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/math/math.js"></script>
 
-        <script>
+    <script>
 
-            Reveal.initialize({
-                controls: true,
-                progress: true,
-                history: true,
-                center: true,
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
 
-                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
-            });
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX]
+        });
 
-        </script>
+    </script>
 
-    </body>
+</body>
+
 </html>
