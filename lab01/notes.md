@@ -3,7 +3,7 @@
 ## Structure
 The lab is broken up into three sections. 
 
-The first section is a check-in with the students about the recent homework, how lecture is going, and their thoughts on the course. The primary purpose of this section is to help dispell impostor syndrome by reminding the students that any level of struggling is okay, and we are here to support them.
+The first section is a check-in with the students about the recent homework, how lecture is going, and their thoughts on the course. The primary purpose of this section is to help dispel impostor syndrome by reminding the students that any level of struggling is okay, and we are here to support them.
 
 The second section is a rapid-fire review of the topics that have been covered recently.
 
@@ -60,7 +60,7 @@ Once students have made their predictions, advance through the slide builds to d
 
 #### Boolean Expressions
 
-Raise the screen and do as you did in tahe Variables section. But, once you step through all the answers, there is another row hidden which is revealed. It is a bug, using the assignment operator `=` instead of the equality comparison `==`.
+Raise the screen and do as you did in the Variables section. But, once you step through all the answers, there is another row hidden which is revealed. It is a bug, using the assignment operator `=` instead of the equality comparison `==`.
 
 #### Liam's pet peeve
 
