@@ -44,6 +44,7 @@ As above
 #### Arrays
 
 Mute the projector and draw an array of integers on the board with the standard "row of boxes" notation, 5 elements long. Then write out some example c++ and ask the following questions:
+
 * What is the length of this array?
 * What is at `arr[2]`?
 * What is at `arr[4]`?
