@@ -9,6 +9,5 @@ log/*.log
 tmp/**
 node_modules/
 .sass-cache
-/index.html
 examples/
 .vscode/
