@@ -72,7 +72,7 @@
                 </section>
                 <section data-auto-animate>
                     <h2> Loops </h2>
-                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="">
+                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="" data-id="loopprinter">
                         string s = "Hello Lab LD!";
                         
                         size_t i = 0;
@@ -87,12 +87,15 @@
                 </section>
                 <section data-auto-animate>
                     <h2> Loops </h2>
-                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="">
+                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="" data-id="loopprinter">
                         string s = "Hello Lab LD!";
                         
+
+
                         for (size_t i = 0; i < s.length(); i++) {
                             cout << s[i];
                         }
+
 
                         cout << endl;
                     </code></pre>
@@ -186,7 +189,8 @@
                             cout << "Please enter your name: ";
                             cin >> user_name;
 
-
+                            
+                            return 0;
                         }
 
                         void say_hi(string name) {
@@ -196,7 +200,7 @@
                 </section>
                 <section data-auto-animate>
                     <h2> Functions </h2>
-                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="|1,11-13" data-id="fun1">
+                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="|1|12-14|8||1,12-14" data-id="fun1">
                         void say_hi(string name);
 
                         int main() {
@@ -205,6 +209,7 @@
                             cin >> user_name;
 
                             say_hi(user_name);
+                            return 0;
                         }
 
                         void say_hi(string name) {
@@ -214,13 +219,14 @@
                 </section>
                 <section data-auto-animate>
                     <h2> Functions </h2>
-                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="" data-id="fun1">
+                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="1,2,4-14" data-id="fun1">
                         void say_hi(string name);
 
-                        int main() {}
+                        int main() { ... }
 
                         
-                        
+
+
 
 
 
@@ -232,21 +238,30 @@
                 </section>
                 <section data-auto-animate>
                     <h2> Functions </h2>
-                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="" data-id="fun1">
+                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="1,2,4-14" data-id="fun1">
                         void say_hi(string name);
 
                         int main() {}
+
 
                         /* say_hi
-                        *    Purpose: Emit a greeting
-                        * Parameters: The name of the person to be greeted
-                        *    Returns: none
-                        *    Effects: Prints to standard output
-                        */
+                         *    Purpose: Emit a greeting
+                         * Parameters: The name of the person to be greeted
+                         *    Returns: none
+                         *    Effects: Prints to standard output
+                         */
                         void say_hi(string name) {
                             cout << "Hey there " << name << "!" << endl;
                         }
                     </code></pre>
+                </section>
+                <section>
+                    <h3> Example Code </h3>
+                    <ul>
+                        <li> <a href="./loops.cpp"><code>loops.cpp</code></a> </li>
+                        <li> <a href="./arrays.cpp"><code>arrays.cpp</code></a> </li>
+                        <li> <a href="./functions.cpp"><code>functions.cpp</code></a> </li>
+                    </ul>
                 </section>
             </section>
             <section>
