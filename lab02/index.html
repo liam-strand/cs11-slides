@@ -32,26 +32,240 @@
                 <section>
                     <h1> Today's goals </h1>
                 </section>
+                <section>
+                    <h2> Check In </h2>
+                    <ul>
+                        <li> <code>hw01</code> </li>
+                        <li> Office Hours </li>
+                        <li> Lecture </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2> Review </h2>
+                    <ul>
+                        <li> Loops </li>
+                        <li> 2D Arrays </li>
+                        <li> Functions </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2> <code>snowcrash</code> </h2>
+                    <ul>
+                        <li> The Spec </li>
+                        <li> Phase 4 </li>
+                        <li> <code>pull-crash</code> </li>
+                        <li> <code>diff-crash</code> </li>
+                    </ul>
+                </section>
             </section>
             <section>
                 <h2> Check In </h2>
                 <ul>
                     <li> How did <code>hw01</code> go? </li>
                     <li> Have you been to office hours? </li>
+                    <li> Any spicy note-taking strategies for lecture? </li>
                 </ul>
             </section>
             <section>
                 <section>
                     <h1> Review </h1>
                 </section>
+                <section data-auto-animate>
+                    <h2> Loops </h2>
+                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="">
+                        string s = "Hello Lab LD!";
+                        
+                        size_t i = 0;
+
+                        while (i < s.length()) {
+                            cout << s[i];
+                            i++;
+                        }
+
+                        cout << endl;
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <h2> Loops </h2>
+                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="">
+                        string s = "Hello Lab LD!";
+                        
+                        for (size_t i = 0; i < s.length(); i++) {
+                            cout << s[i];
+                        }
+
+                        cout << endl;
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <h2> Loops </h2>
+                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="" data-id="loopcounter">
+                        string s = "Hello Lab LD!";
+                        size_t num = 0;
+                        
+                        for (size_t i = 0; i < s.length(); i++) {
+                            num++;
+                        }
+
+                        cout << "The number is: " << num << endl;
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <h2> Loops </h2>
+                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="" data-id="loopcounter">
+                        string s = "Hello Lab LD!";
+                        size_t num = 0;
+                        
+                        for (size_t i = 0; i < s.length(); i++) {
+                            num += i;
+                        }
+
+                        cout << "The number is: " << num << endl;
+                    </code></pre>
+                </section>
+                <section data-auto-animate data-auto-animate-restart>
+                    <h2> 2D Arrays </h2>
+                    Board Work
+                </section>
+                <section data-auto-animate>
+                    <h2> 2D Arrays </h2>
+                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="" data-id="2darray">
+                        int arr[4][5] = {
+                            {0, 1, 2,  3,  4},
+                            {0, 2, 4,  6,  8},
+                            {0, 3, 6,  9, 12},
+                            {0, 4, 8, 12, 16}
+                        };
+                   
+                        for (size_t i = 0; i < 4; i++) {
+                            for (size_t j = 0; j < 5; j++) {
+                                cout << arr[i][j] << " ";
+                            }
+                            cout << endl;
+                        }
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <h2> 2D Arrays </h2>
+                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="" data-id="2darray">
+                        int arr[4][5] = {
+                            {0, 1, 2,  3,  4},
+                            {0, 2, 4,  6,  8},
+                            {0, 3, 6,  9, 12},
+                            {0, 4, 8, 12, 16}
+                        };
+                   
+                        for (size_t j = 0; j < 5; j++) {
+                            for (size_t i = 0; i < 4; i++) {
+                                cout << arr[i][j] << " ";
+                            }
+                            cout << endl;
+                        }
+                    </code></pre>
+                </section>
+                <section data-auto-animate data-auto-animate-restart>
+                    <h2> Functions </h2>
+
+                    <h4 class="fragment">What is good about functions?</h4>
+                    
+                    <ul>
+                        <li class="fragment"> Readability </li>
+                        <li class="fragment"> Reusability </li>
+                        <li class="fragment"> Debugability </li>
+                        <li class="fragment"> Documentability</li>
+                        <li class="fragment"> They are FUN </li>
+                    </ul>
+                </section>
+                <section data-auto-animate>
+                    <h2> Functions </h2>
+                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="" data-id="fun1">
+                        void say_hi(string name);
+
+                        int main() {
+                            string user_name;
+                            cout << "Please enter your name: ";
+                            cin >> user_name;
+
+
+                        }
+
+                        void say_hi(string name) {
+                            cout << "Hey there " << name << "!" << endl;
+                        }
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <h2> Functions </h2>
+                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="|1,11-13" data-id="fun1">
+                        void say_hi(string name);
+
+                        int main() {
+                            string user_name;
+                            cout << "Please enter your name: ";
+                            cin >> user_name;
+
+                            say_hi(user_name);
+                        }
+
+                        void say_hi(string name) {
+                            cout << "Hey there " << name << "!" << endl;
+                        }
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <h2> Functions </h2>
+                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="" data-id="fun1">
+                        void say_hi(string name);
+
+                        int main() {}
+
+                        
+                        
+
+
+
+
+                        void say_hi(string name) {
+                            cout << "Hey there " << name << "!" << endl;
+                        }
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <h2> Functions </h2>
+                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="" data-id="fun1">
+                        void say_hi(string name);
+
+                        int main() {}
+
+                        /* say_hi
+                        *    Purpose: Emit a greeting
+                        * Parameters: The name of the person to be greeted
+                        *    Returns: none
+                        *    Effects: Prints to standard output
+                        */
+                        void say_hi(string name) {
+                            cout << "Hey there " << name << "!" << endl;
+                        }
+                    </code></pre>
+                </section>
             </section>
             <section>
                 <section>
-                    <h1 class="r-fit-text"> content </h1>
+                    <h1 class="r-fit-text"> <code>snowcrash</code> </h1>
                 </section>
                 <section>
-                    <h2>Find the <a href="https://www.cs.tufts.edu/cs/11/schedule/lab02/lab02.pdf"> lab spec</a></h2>
-                    It's time for a demo!
+                    <h2> Find the <a href="https://www.cs.tufts.edu/cs/11/schedule/lab02/lab02.pdf">lab spec</a> </h2>
+                    Let's talk it through
+                </section>
+                <section>
+                    <h2> Things To Remember:</h2>
+                    <ul>
+                        <li> Only work on Phase 4 with your parther. </li>
+                        <li> How do you run <code>snowcrash</code>? </li>
+                        <li> How do you <code>diff</code> test your code? </li>
+                        <li> Make a copy of <code>snowcrash.cpp</code> before you start working (for the written later on)</li>
+                        <li> Try it on paper first!!!!! </li>
+                    </ul>
                 </section>
             </section>
             <section>
@@ -76,10 +290,10 @@
             center: true,
 
             keyboard: {
-                37: 'prev',
-                38: 'prev',
-                39: 'next',
-                40: 'next'
+                37: "prev",
+                38: "prev",
+                39: "next",
+                40: "next"
             },
 
             plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX]
