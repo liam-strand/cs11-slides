@@ -31,7 +31,7 @@ int main() {
  *    Effects: Prints to standard output
  */
 void print_array(int arr[], size_t len) {
-
+    /* TODO implement this function */
 }
 
 /* change_array
