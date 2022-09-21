@@ -241,7 +241,26 @@
                     <pre><code class="cpp" data-trim data-noescape data-line-numbers="1,2,4-14" data-id="fun1">
                         void say_hi(string name);
 
-                        int main() {}
+                        int main() { ... }
+
+
+                        /* 
+                         * 
+                         * 
+                         * 
+                         * 
+                         */
+                        void say_hi(string name) {
+                            cout << "Hey there " << name << "!" << endl;
+                        }
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <h2> Functions </h2>
+                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="1,2,4-14" data-id="fun1">
+                        void say_hi(string name);
+
+                        int main() { ... }
 
 
                         /* say_hi
@@ -255,12 +274,77 @@
                         }
                     </code></pre>
                 </section>
+                <section data-auto-animate>
+                    <h2> Functions </h2>
+                    <h3> Pass By Value / Pass By Reference </h3>
+                </section>
+                <section data-auto-animate>
+                    <h3> Pass By Value / Pass By Reference </h3>
+                    <ul>
+                        <li> Arrays can be really big </li>
+                        <li> Arrays can be of variable size </li>
+                        <li> The function call stack has limited space </li>
+                    </ul>
+                </section>
+                <section data-auto-animate>
+                    <h3> Pass By Value / Pass By Reference </h3>
+                    <table>
+                        <tr>
+                            <th> C++ Type </th>
+                            <th> PBR or PBV? </th>
+                        </tr>
+                        <tr>
+                            <td><code>int</code></td>
+                            <td><p class="fragment">Value</p></td>
+                        </tr>
+                        <tr>
+                            <td><code>float[]</code></td>
+                            <td><p class="fragment">Reference</p></td>
+                        </tr>
+                        <tr>
+                            <td><code>unsigned int</code></td>
+                            <td><p class="fragment">Value</p></td>
+                        </tr>
+                        <tr>
+                            <td><code>char[][]</code></td>
+                            <td><p class="fragment">Reference</p></td>
+                        </tr>
+                        <tr>
+                            <td><code>string</code></td>
+                            <td><p class="fragment">Value</p></td>
+                        </tr>
+                    </table>
+                </section>
+                <section data-auto-animate>
+                    <h3> Pass By Value / Pass By Reference </h3>
+                    <pre><code class="cpp" data-trim data-noescape data-line-numbers="|2|4-6|11-13|" data-id="print_array">
+                        int main() {
+                            int integers[10] = {0, 1, 2, 3, 4, 0, 2, 4, 6, 8};
+                        
+                            print_array(integers, 10);
+                            change_array(integers, 3, -1);
+                            print_array(integers, 10);
+                        
+                            return 0;
+                        }
+
+                        void change_array(int arr[], size_t idx, int val) {
+                            arr[idx] = val;
+                        }
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <h3> Pass By Value / Pass By Reference </h3>
+                    <a href="./array_args_starter.cpp">Live Coding</a>
+                </section>
                 <section>
                     <h3> Example Code </h3>
                     <ul>
                         <li> <a href="./loops.cpp"><code>loops.cpp</code></a> </li>
                         <li> <a href="./arrays.cpp"><code>arrays.cpp</code></a> </li>
                         <li> <a href="./functions.cpp"><code>functions.cpp</code></a> </li>
+                        <li> <a href="./array_args_starter.cpp"><code>array_args_starter.cpp</code></a> </li>
+                        <li> <a href="./array_args_solution.cpp"><code>array_args_solution.cpp</code></a> </li>
                     </ul>
                 </section>
             </section>
