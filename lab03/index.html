@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title> cs11-lab02 </title>
+
+    <link rel="stylesheet" href="../reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/dist/theme/black.css" id="theme">
+    <link rel="stylesheet" href="../reveal.js/plugin/highlight/monokai.css">
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <div class="slides">
+
+            <section>
+                <section>
+                    <h1> Welcome! </h1>
+                    <h2><code> lab03 </code></h2>
+                    <a href="./notes.pdf">Liam Strand</a>
+                </section>
+                <section>
+                    <h2> Are you supposed to be here? </h2>
+                    yes, obviously
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1> Today's goals </h1>
+                </section>
+                <section>
+                    <h2> Check In </h2>
+                    <ul>
+                        <li> <code>hw02</code> </li>
+                        <li> Office Hours </li>
+                        <li> Collaboration </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2> Review </h2>
+                    <ul>
+                        <li> Debugging </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2> Preview </h2>
+                    <ul>
+                        <li> <code>tradecraft</code> </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2> Baby G </h2>
+                    <ul>
+                        <li> Use file streams to read from a file </li>
+                        <li> Practice algorithmic problem solving </li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h2> Check In </h2>
+                <ul>
+                    <li> How did <code>hw02</code> go? </li>
+                    <li> Have you been to office hours? </li>
+                    <li> How you like collaborating in lab vs not collaborating on hw? </li>
+                </ul>
+            </section>
+            <section>
+                <section>
+                    <h1> Review </h1>
+                </section>
+                <section>
+                    <h2> Debugging </h2>
+                    Live Coding
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1> Preview </h1>
+                </section>
+                <section>
+                    <h2> <a href="https://www.cs.tufts.edu/cs/11/schedule/hw03/hw03.pdf"><code>tradecraft</code></a> </h2>
+                    <ul>
+                        <li> <code>decrypt</code>, but way better! </li>
+                        <li> Time management </li>
+                        <li> Problem solving </li>
+                        <li> Strategies </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Break the Caesar Cipher</h2>
+                    <ul>
+                        <li> We give you encrypted text </li>
+                        <li> You tell us the shift amount </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2> Time Management </h2>
+                    <ul>
+                        <li> This assignment is challenging </li>
+                        <li> You <b><u><i>must</i></u></b> start early </li>
+                        <li> Office Hours will be very crowded next week </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2> Problem Solving </h2>
+                    <ol>
+                        <li> Understand the problem </li>
+                        <li> Work through some examples </li>
+                        <li> Design an algorithm </li>
+                        <li> Express your algorithm in C++ </li>
+                    </ol>
+                </section>
+                <section>
+                    <h2> Strategies </h2>
+                    <ul>
+                        <li> Start simple </li>
+                        <li> Test as you go </li>
+                        <li> Take breaks </li>
+                        <li> Use tokens if necessary </li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1 class="r-fit-text"> Baby G </h1>
+                </section>
+                <section>
+                    <h2> Find the <a href="https://www.cs.tufts.edu/cs/11/schedule/lab03/lab03.pdf">lab spec</a> </h2>
+                    Let's talk it through
+                </section>
+                <section>
+                    <h3> Which curly braces are okay? </h3>
+                    <table>
+                        <tr>
+                            <th> Curls </th>
+                            <th> Good? </th>
+                        </tr>
+                        <tr>
+                            <td><code>{{}}</code></td>
+                            <td><p class="fragment">✅</p></td>
+                        </tr>
+                        <tr>
+                            <td><code>}{</code></td>
+                            <td><p class="fragment">❎</p></td>
+                        </tr>
+                        <tr>
+                            <td><code>{}}{}{{}</code></td>
+                            <td><p class="fragment">❎</p></td>
+                        </tr>
+                        <tr>
+                            <td><code>{}{{}{}}</code></td>
+                            <td><p class="fragment">✅</p></td>
+                        </tr>
+                    </table>
+                </section>
+                <section>
+                    <h2> Problem Solving </h2>
+                    <ol>
+                        <li> Understand the problem </li>
+                        <li> Work through some examples </li>
+                        <li> Design an algorithm </li>
+                        <li> Express your algorithm in C++ </li>
+                    </ol>
+                </section>
+                <section>
+                    <h2> Things To Remember:</h2>
+                    <ul>
+                        <li> Try it on paper first! </li>
+                        <li> Pseudocode is very helpful and important </li>
+                        <li> Remember to collaborate :) </li>
+                        
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h2> Feedback Form </h2>
+                <img class="r-stretch" src="../assets/feedback-code.png">
+            </section>
+        </div>
+    </div>
+
+    <script src="../reveal.js/dist/reveal.js"></script>
+    <script src="../reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../reveal.js/plugin/highlight/highlight.js"></script>
+    <script src="../reveal.js/plugin/notes/notes.js"></script>
+    <script src="../reveal.js/plugin/math/math.js"></script>
+
+    <script>
+
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            keyboard: {
+                37: "prev",
+                38: "prev",
+                39: "next",
+                40: "next"
+            },
+
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX]
+        });
+
+    </script>
+
+</body>
+
+</html>

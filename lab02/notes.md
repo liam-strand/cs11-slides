@@ -2,6 +2,8 @@
 title: lab02 snowcrash
 date: September 21, 2022
 author: Liam Strand 
+geometry: margin=1in
+output: pdf_document
 ---
 
 # Structure
