@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title> cs11-lab02 </title>
+
+    <link rel="stylesheet" href="../reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="../reveal.js/dist/theme/black.css" id="theme">
+    <link rel="stylesheet" href="../reveal.js/plugin/highlight/monokai.css">
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <div class="slides">
+
+            <section>
+                <section>
+                    <h1> <a href="https://youtu.be/Zrly3QMUhoo">Welcome!</a> </h1>
+                    <h2><code> lab04 </code></h2>
+                    <a href="./notes.pdf">Liam Strand</a>
+                </section>
+                <section>
+                    <h2> Are you supposed to be here? </h2>
+                    yes, obviously
+                </section>
+                <section>
+                    <h2> Am I supposed to be here? </h2>
+                    hopefully? It's been a while lol :)
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1> Today's goals </h1>
+                </section>
+                <section>
+                    <h2> Check In </h2>
+                    <ul>
+                        <li> <code>hw03</code> </li>
+                        <li> Office Hours </li>
+                        <li> Debugging </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2> Review </h2>
+                    Pointers
+                </section>
+                <section>
+                    <h2> Preview </h2>
+                    <code>hw04</code>
+                </section>
+                <section>
+                    <h2> Ye Oldy Strings </h2>
+                    <ul>
+                        <li> Learn how a programming language without a <code>string</code> type can still provide string functionality. </li> 
+                        <li> Practice interacting with computer memory. </li>
+                        <li> Practice implementing functions. </li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h2> Check In </h2>
+                <ul>
+                    <li> How did <code>hw03</code> go? </li>
+                    <li> How was the queue in office hours? </li>
+                    <li> How has debugging on your own been going? </li>
+                </ul>
+            </section>
+            <section>
+                <section>
+                    <h1> Review </h1>
+                </section>
+                <section>
+                    <h2> Pointers </h2>
+                    <a href="./pointers_starter.cpp" class="fragment">Live Coding</a>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1> Preview </h1>
+                </section>
+                <section>
+                    <h2> <a href="https://www.cs.tufts.edu/cs/11/schedule/hw04/hw04.pdf">Word Play</a> </h2>
+                    <img src="./assets/2560px-Back-to-the-future-logo.svg.png" alt="BACK TO THE FUTURE!">
+                </section>
+                <section>
+                    <div class="r-vstack">
+                        <h2>C++ Origins</h2>
+                        Bjarne Stroustrup
+                    </div>
+                    <img src="./assets/Bjarne-stroustrup_(cropped).jpg" alt="Bjarne Stroustrup" class="r-stretch">
+                </section>
+                <section>
+                    <div class="r-vstack">
+                        <h2>C</h2>
+                        Ken and Dennis
+                    </div>
+                    <img src="./assets/Ken_Thompson_and_Dennis_Ritchie--1973.jpg" alt="Ken Thompson and Dennis Ritchie" class="r-stretch">
+                </section>
+                <section>
+                    <img src="./assets/C-influence.png" alt="Many of the popular languages that have been influenced by C" class="r-stretch">
+
+                    <h4><a href="https://en.wikipedia.org/wiki/List_of_C-family_programming_languages">even more</a></h4>
+                </section>
+                <section>
+                    <ul>
+                        <li> No <code>string</code> type </li>
+                        <li> We <code>char</code> arrays instead </li>
+                    </ul>
+                </section>
+                <section>
+                    <img src="./assets/Charcater-Array-as-String.jpg" alt="foobar as a c-style string" class="r-stretch">
+                </section>
+                <section>
+                    <img src="./assets/string_representation.jpg" alt="hello as a c-style string" class="r-stretch">
+                </section>
+                <section data-auto-animate>
+                    <pre><code class="cpp" data-trim data-noescape data-id="char_array">
+                        int main() {
+                            char string_lit[11] = "Hey there!";
+                            char array_lit[11]  = {'H', 'e', 'y', ' ', 
+                                                   't', 'h', 'e', 'r', 'e', 
+                                                   '!', '\0'};
+                        
+                            cout << string_lit << endl;
+                            cout << array_lit  << endl;
+                            
+                            return 0;
+                        }
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <pre><code class="cpp" data-trim data-noescape data-id="char_array">
+                        int main() {
+                            char string_lit[] = "Hey there!";
+                            char array_lit[]  = {'H', 'e', 'y', ' ', 
+                                                 't', 'h', 'e', 'r', 'e', 
+                                                 '!', '\0'};
+                        
+                            cout << string_lit << endl;
+                            cout << array_lit  << endl;
+                            
+                            return 0;
+                        }
+                    </code></pre>
+                </section>
+                <section>
+                    <h2> Problem Solving </h2>
+                    <ol>
+                        <li> Understand the problem </li>
+                        <li> Work through some examples </li>
+                        <li class="fragment highlight-current-red"> Design an algorithm </li>
+                        <li> Express your algorithm in C++ </li>
+                    </ol>
+                </section>
+                <section>
+                    <h2> Strategies </h2>
+                    <ul>
+                        <li> Start early </li>
+                        <li> Implement one function at a time </li>
+                        <li> Test as you go </li>
+                        <li> Take breaks </li>
+                        <li> Use tokens if necessary </li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1 class="r-fit-text"> Ye Oldy Strings </h1>
+                </section>
+                <section>
+                    <h2> Find the <a href="https://www.cs.tufts.edu/cs/11/schedule/lab04/lab04.pdf">lab spec</a> </h2>
+                    Let's talk it through
+                </section>
+                <section>
+                    <h2> As a review... </h2>
+                    <ol>
+                        <li> Understand the problem </li>
+                        <li> Work through some examples </li>
+                        <li> Design an algorithm </li>
+                        <li class="fragment"> Express your algorithm in C++ </li>
+                    </ol>
+                </section>
+                <section>
+                    <h2> Things To <a href="https://beta.music.apple.com/library/playlist/p.blW1sb0RG0zx">Remember</a>: </h2>
+                    <ul>
+                        <li> When in doubt...draw it out! </li>
+                        <li> Pseudocode is very helpful and important </li>
+                        <li> Remember to only collaborate on <code>is_equal()</code> </li>
+                    </ul>
+                    <img src="./assets/Charcater-Array-as-String.jpg" alt="foobar as a c-style string">
+                </section>
+            </section>
+            <section>
+                <h2> Feedback Form </h2>
+                <img class="r-stretch" src="../assets/feedback-code.png">
+            </section>
+        </div>
+    </div>
+
+    <script src="../reveal.js/dist/reveal.js"></script>
+    <script src="../reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../reveal.js/plugin/highlight/highlight.js"></script>
+    <script src="../reveal.js/plugin/notes/notes.js"></script>
+    <script src="../reveal.js/plugin/math/math.js"></script>
+
+    <script>
+
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            keyboard: {
+                37: "prev",
+                38: "prev",
+                39: "next",
+                40: "next"
+            },
+
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX]
+        });
+
+    </script>
+
+</body>
+
+</html>
