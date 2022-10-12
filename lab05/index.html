@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>cs11-lab05</title>
+
+    <link rel="stylesheet" href="../reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="../reveal.js/dist/theme/black.css"
+      id="theme"
+    />
+    <link rel="stylesheet" href="../reveal.js/plugin/highlight/monokai.css" />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <section>
+            <h1>Welcome!</h1>
+            <h2><code> lab05 </code></h2>
+            <a href="./notes.pdf">Liam Strand</a>
+          </section>
+          <section>
+            <h2>Are you supposed to be here?</h2>
+            yes, obviously
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Today's goals</h1>
+          </section>
+          <section>
+            <h2>Check In</h2>
+            <ul>
+              <li><code>hw04</code></li>
+              <li>Pointers</li>
+              <li>Dynamic Memory</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Review</h2>
+            <ul>
+              <li>Structs</li>
+              <li>Dynamic Memory</li>
+              <li><code>valgrind</code></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Black Book</h2>
+            <ul>
+              <li>Use structs and pointers</li>
+              <li>Work with structured data using functions</li>
+              <li>Break down a problem into function-sized chunks</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h2>Check In</h2>
+          <ul>
+            <li>How did <code>hw04</code> go?</li>
+            <li>How do we feel about pointers?</li>
+            <li>What about dynamic memory?</li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h1>Review</h1>
+          </section>
+          <section data-auto-animate>
+            <h2>Structs, Dynamic Memory, and <code>valgrind</code></h2>
+          </section>
+          <section data-auto-animate>
+            <h2>Structs, Dynamic Memory, and <code>valgrind</code></h2>
+            <img src="./assets/omg.jpeg" />
+          </section>
+          <section data-auto-animate>
+            <h2>Structs, Dynamic Memory, and <code>valgrind</code></h2>
+            <a href="./demo_stareter.cpp">Live Coding</a>
+          </section>
+          <section data-auto-animate>
+            <h2>Structs, Dynamic Memory, and <code>valgrind</code></h2>
+            <ul>
+              <li>Draw a picture of your data first</li>
+              <li>Think about types</li>
+              <li><code>valgrind</code> is your friend</li>
+              <li>Don't forget <code>-g</code></li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1 class="r-fit-text">Black Book</h1>
+          </section>
+          <section>
+            <h2>
+              Find the
+              <a href="https://www.cs.tufts.edu/cs/11/schedule/lab05/lab05.pdf">
+                lab spec
+              </a>
+            </h2>
+            Let's talk it through
+          </section>
+          <section data-auto-animate>
+            <h2>Shaped Data</h2>
+            <table>
+              <tr>
+                  <th> Thing </th>
+                  <th> Type </th>
+              </tr>
+              <tr>
+                  <td><code>int n;</code></td>
+                  <td><code class="fragment">int</code></td>
+              </tr>
+              <tr>
+                  <td><code>&n</code></td>
+                  <td><code class="fragment">int*</code></td>
+              </tr>
+              <tr>
+                  <td><code>float arr[10];</code></td>
+                  <td><code class="fragment">float[]</code></td>
+              </tr>
+              <tr>
+                  <td><code>arr[2]</code></td>
+                  <td><code class="fragment">float</code></td>
+              </tr>
+              <tr>
+                  <td><code>&arr[7]</code></td>
+                  <td><code class="fragment">float*</code></td>
+              </tr>
+          </table>
+          </section>
+          <section data-auto-animate>
+            <h2>Shaped Data</h2>
+            <pre><code class="cpp" data-trim data-noescape>
+            struct Student {
+                string name;
+                float  gpa;
+                char   grade;
+            };
+            
+            struct Course {
+                Student students[MAX_STUDENTS];
+                int     num_students;
+                string  name;
+                string  instructor;
+                int     cs_dpt_id;
+            };
+            </code></pre>
+          </section>
+          <section data-auto-animate>
+            <h2>Shaped Data</h2>
+            <table>
+              <tr>
+                  <th> Thing </th>
+                  <th> Type </th>
+              </tr>
+              <tr>
+                <td><code>Student s</code></td>
+                <td><code class="fragment">Student</code></td>
+              </tr>
+              <tr>
+                <td><code>s.gpa</code></td>
+                <td><code class="fragment">float</code></td>
+              </tr>
+              <tr>
+                <td><code>s.grade</code></td>
+                <td><code class="fragment">char</code></td>
+              </tr>
+              <tr>
+                <td><code>&(s.grade)</code></td>
+                <td><code class="fragment">char*</code></td>
+              </tr>
+          </table>
+          </section>
+          <section data-auto-animate>
+            <h2>Shaped Data</h2>
+            <table>
+              <tr>
+                <th> Thing </th>
+                <th> Type </th>
+              </tr>
+              <tr>
+                <td><code>Course c;</code></td>
+                <td><code class="fragment">Course</code></td>
+              </tr>
+              <tr>
+                <td><code>c.students</code></td>
+                <td><code class="fragment">Student[]</code></td>
+              </tr>
+              <tr>
+                <td><code>c.students[5]</code></td>
+                <td><code class="fragment">Student</code></td>
+              </tr>
+              <tr>
+                <td><code>c.students[5].name</code></td>
+                <td><code class="fragment">string</code></td>
+              </tr>
+              <tr>
+                <td><code>&(c.students[5].grade)</code></td>
+                <td><code class="fragment">float*</code></td>
+              </tr>
+            </table>
+          </section>
+          <section>
+            <h2>As a review...</h2>
+            <ol>
+              <li>Understand the problem</li>
+              <li>Work through some examples</li>
+              <li>Design an algorithm</li>
+              <li class="fragment">Express your algorithm in C++</li>
+            </ol>
+          </section>
+          <section>
+            <h2>
+              Things To
+              <a
+                href="https://beta.music.apple.com/library/playlist/p.blArib0RG0zx"
+                >Remember</a
+              >:
+            </h2>
+            <ul>
+              <li>When in doubt...draw it out!</li>
+              <li>Pseudocode is very helpful and important!</li>
+              <li>Think about the types!</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="./demo_starter.cpp">demo_starter.cpp</a></li>
+            <li><a href="./demo_solution.cpp">demo_solution.cpp</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Feedback Form</h2>
+          <img class="r-stretch" src="../assets/feedback-code.png" />
+        </section>
+      </div>
+    </div>
+
+    <script src="../reveal.js/dist/reveal.js"></script>
+    <script src="../reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../reveal.js/plugin/highlight/highlight.js"></script>
+    <script src="../reveal.js/plugin/notes/notes.js"></script>
+    <script src="../reveal.js/plugin/math/math.js"></script>
+
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        keyboard: {
+          37: "prev",
+          38: "prev",
+          39: "next",
+          40: "next",
+        },
+
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealNotes,
+          RevealMath.KaTeX,
+        ],
+      });
+    </script>
+  </body>
+</html>
