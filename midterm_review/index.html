@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>midterm-review</title>
+
+    <link rel="stylesheet" href="../reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="../reveal.js/dist/theme/black.css"
+      id="theme"
+    />
+    <link rel="stylesheet" href="../reveal.js/plugin/highlight/monokai.css" />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <section>
+            <h1>Welcome!</h1>
+            <h2><code> Midterm Review </code></h2>
+            <h4>Liam and Lucas</h4>
+          </section>
+          <section>
+            <h2>Are you supposed to be here?</h2>
+            yes, obviously
+          </section>
+        </section>
+        <section>
+          <h2>Tonight's goals:</h2>
+          <ul>
+            <li>Develop Confidence</li>
+            <li>Answer Questions</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Check In</h2>
+          What topics are people concerned about?
+        </section>
+        <section>
+          <section>
+            <h1>Exam Structure</h1>
+          </section>
+          <section>
+            <h2>Word Bank</h2>
+            <img src="./assets/word_bank.png" alt="A picture of a word bank and fill-in-the-blank questions">
+          </section>
+          <section>
+            <h2>Short Response</h2>
+            <img src="./assets/short_answer.png" alt="A picture of short answer questions">
+          </section>
+          <section>
+            <h2>Programming</h2>
+            <img src="./assets/programming.png" alt="A picture of a programming question">
+          </section>
+          <section>
+            <h2>Debugging</h2>
+            <pre><code class="cpp" data-trim data-noescape data-line-numbers="|4-5" data-ln-start-from="4">
+              bool is_bigger(int p, int q);
+              
+              int main() {
+                  int a;
+                  if (is_bigger(a, 6)) {
+                      cout << "a is bigger" << endl;
+                  } else {
+                      cout << "a is NOT bigger" << endl;
+                  }
+                  return 0;
+              }
+              
+              bool is_bigger(int p, int q) {
+                  return p > q;
+              }
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Skills and Concepts</h1>
+          </section>
+          <section>
+            <h2><code>C++</code> Concepts and Syntax</h2>
+            <ul>
+              <li>Basic Operations</li>
+              <li>Conditionals and Boolean Expressions</li>
+              <li>Loops (<code>for</code> and <code>while</code>)</li>
+              <li>Functions (declarations, definitions, calls, scope, CBV/CBR)</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Memory and Data </h2>
+            <ul>
+              <li>Arrays (1D and 2D)</li>
+              <li>File I/O (opening, checking, reading, closing)</li>
+              <li>Pointer Concepts (tracing, escaping scope)</li>
+              <li>Pointer Utilization (passing through functions, <code>*</code> and <code>&</code>)</li>
+              <li>Dynamic Memory Allocations (<code>new</code> and <code>delete</code>)</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Utilities</h2>
+            <ul>
+              <li><code>diff</code></li> 
+              <li>Compilation</li>
+              <li><code>pull-code11</code> and <code>submit11</code></li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Practice Problems</h1>
+          </section>
+          <section>
+            <h2>Problem 1</h2>
+            <table>
+              <tr>
+                <td>test</td>
+                <td>another thing</td>
+              </tr>
+              <tr>
+                <td>something</td>
+                <td>else</td>
+              </tr>
+            </table>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="../reveal.js/dist/reveal.js"></script>
+    <script src="../reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="../reveal.js/plugin/highlight/highlight.js"></script>
+    <script src="../reveal.js/plugin/notes/notes.js"></script>
+    <script src="../reveal.js/plugin/math/math.js"></script>
+
+    <script>
+      Reveal.initialize({
+        controls: false,
+        progress: true,
+        history: true,
+        center: true,
+
+        keyboard: {
+          37: "prev",
+          38: "prev",
+          39: "next",
+          40: "next",
+        },
+
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealNotes,
+          RevealMath.KaTeX,
+        ],
+      });
+    </script>
+  </body>
+</html>

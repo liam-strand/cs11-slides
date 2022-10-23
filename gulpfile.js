@@ -298,7 +298,7 @@ gulp.task('serve', () => {
         livereload: true
     })
 
-    gulp.watch(['lab*/*.html', 'lab*/*.md', "*.md", "*.html"], gulp.series('reload'))
+    gulp.watch(['lab*/*.html', 'lab*/*.md', "*.md", "*.html", "midterm_review/*.html"], gulp.series('reload'))
 
     gulp.watch(['js/**'], gulp.series('js', 'reload', 'eslint'))
 
