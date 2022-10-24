@@ -236,6 +236,23 @@
           </section>
           <section>
             <h2>Problem 5</h2>
+            <p>What is this <code>diff</code> report trying to tell you?</p>
+            <pre><code class="plaintext" data-noescape data-trim>
+              $ diff diff1.txt diff2.txt
+              2d1
+              < 
+              6c5
+              < One clover, and a bee.
+              ---
+              > One  clover, and a bee.
+              8c7
+              < The revery alone will do,
+              ---
+              > The revery alone will do ,
+            </code></pre>
+          </section>
+          <section>
+            <h2>Problem 6</h2>
             <p>Find and <b><i>fix</i></b> the bug!</p>
             
             <p>Run this command to get the starter code:</p>
