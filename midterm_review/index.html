@@ -31,13 +31,10 @@
         <section>
           <h2>Tonight's goals:</h2>
           <ul>
+            <li>Understand Expectations</li>
             <li>Develop Confidence</li>
             <li>Answer Questions</li>
           </ul>
-        </section>
-        <section>
-          <h2>Check In</h2>
-          What topics are people concerned about?
         </section>
         <section>
           <section>
@@ -109,22 +106,147 @@
           </section>
         </section>
         <section>
-          <section>
+          <h1 class="r-fit-text"><code>Q/A</code></h1>
+        </section>
+        <section>
+          <section data-auto-animate>
             <h1>Practice Problems</h1>
+          </section>
+          <section data-auto-animate>
+            <h1>Practice Problems</h1>
+            <img src="./assets/omg.jpeg" alt="">
           </section>
           <section>
             <h2>Problem 1</h2>
-            <table>
-              <tr>
-                <td>test</td>
-                <td>another thing</td>
-              </tr>
-              <tr>
-                <td>something</td>
-                <td>else</td>
-              </tr>
-            </table>
+            <pre><code class="cpp" data-trim data-noescape data-line-numbers>
+              int i = 17;
+              while (i > 8) {
+                  some_function(i);
+                  cout << "CS 11" << endl;
+                  i--;
+              }
+            </code></pre>
+            <ol>
+              <li>How many times is <code>"CS 11"</code> printed? <p class="fragment"><b>9</b></p></li>
+              <li>What is the value of <code>i</code> after the loop? <p class="fragment"><b>8</b></p></li>
+            </ol>
           </section>
+          <section data-auto-animate>
+            <h2>Problem 2</h2>
+            Write a function with the following signature:
+            <pre><code class="cpp" data-trim data-noescape>
+               void triangular_areas(
+                  float bases[], 
+                  float heights[], 
+                  float areas[]
+               );
+            </code></pre>
+            <ul>
+              <li>The three arrays are all of length <code>SIZE</code>.</li>
+              <li><code>bases[]</code> and <code>heights[]</code> contain the ordered dimensions of triangles.</li>
+              <li>When the function is complete, <code>areas[]</code> should contain the ordered areas of those triangles.</li>
+            </ul>
+          </section>
+          <section data-auto-animate>
+            <h2>Problem 2</h2>
+            <pre><code class="cpp" data-trim data-noescape data-line-numbers>
+              void triangular_areas (
+                  float bases[], 
+                  float heights[], 
+                  float areas[]
+              ) {
+                  for (int row = 0; row < SIZE; row++) {	
+                      areas[row] = bases[row] * heights[row] * 0.5;
+                  }
+              }
+            </code></pre>
+          </section>
+          <section>
+            <h2>Problem 3</h2>
+            Find the Bug[s]!
+            <pre><code class="cpp" data-trim data-noescape data-line-numbers="|2,7|8|" data-ln-start-from="6">
+            int main(int argc, char *argv[]) {
+                if (argc != 1) {
+                    cerr << "Wrong number of arguments" << endl;
+                    return 1;
+                }
+                ifstream input;
+                input.open(argv[0]);
+                if (!ifstream.is_open()) {
+                    cerr << "Couldn't open the file :(" << endl;
+                    return 1;
+                }
+                readFile(input);
+                input.close();
+                return 0;
+            }
+            </code></pre>
+          </section>
+          <section data-auto-animate>
+            <h2>Problem 4</h2>
+            <div class="r-hstack">
+              <span>
+                Given these definitions:
+                <pre><code class="cpp" data-trim data-noescape>
+                  int c = 2;
+                  int d = 6;
+
+                  int *p1 = &c;
+                  int *p2 = &d;
+                  int *p3;
+                </code></pre>
+              </span>
+              <span>
+                What will these lines print?
+                <pre><code class="cpp" data-trim data-noescape data-line-numbers="|2|6|7|11|12|">
+                  p3 = &d;
+                  cout << "*p3 = " << *p3 
+                       << endl;
+
+                  p3 = p1;
+                  cout << " *p3 = " << *p3
+                       << ", p3 = " << p3  
+                       << endl;
+
+                  *p1 = *p2;
+                  cout << " *p1 = " << *p1
+                       << ", p1 = " << p1 
+                       << endl;
+                </code></pre>
+              </span>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h2>Problem 4</h2>
+            <pre><code class="cpp" data-trim data-noescape data-line-numbers>
+              p3 = &d;
+              cout << "*p3 = " << *p3  // 6
+                   << endl;
+
+              p3 = p1;
+              cout << " *p3 = " << *p3 // 2
+                   << ", p3 = " << p3  // 0x7ff... (address of c)
+                   << endl; 
+
+              *p1 = *p2;
+              cout << " *p1 = " << *p1 // 6
+                   << ", p1 = " << p1  // 0x7ff... (address of c)
+                   << endl;
+            </code></pre>
+          </section>
+          <section>
+            <h2>Problem 5</h2>
+            <p>Find and <b><i>fix</i></b> the bug!</p>
+            
+            <p>Run this command to get the starter code:</p>
+            <pre><code class="bash" data-noescape data-trim>
+              cp -R /h/lstran01/Public/heap_bug .
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <span class="r-stretch"><img src="./assets/fermi.jpg"></span>
+          We are all rooting for you :)
         </section>
       </div>
     </div>
@@ -141,6 +263,7 @@
         progress: true,
         history: true,
         center: true,
+        minScale: 0.01,
 
         keyboard: {
           37: "prev",
